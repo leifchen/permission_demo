@@ -8,22 +8,23 @@
 
 # 二、数据库的表设计
 
-详见 sql 包下的 init.sql
+详见 sql 包下的 [init.sql](/sql/init.sql)
 
 
 # 三、Mybatis-Generator
 
-运行 Generator 类加载配置文件 mybatis-generator.xml ，在包 dao、model 下自动生成对应的类，并生成对应的 mapper 映射文件 
+运行 Generator 类加载配置文件 [mybatis-generator.xml](/generator/mybatis-generator.xml) ，
+在包 dao、model 下自动生成对应的类，并生成对应的 mapper 映射文件 
 
 
 # 四、数据源
 
-使用开源的 Druid 数据源监控。配置参考 DruidConfiguration
+使用开源的 Druid 数据源监控。配置参考 [DruidConfiguration](/src/main/java/com/chen/config/DruidConfiguration.java)
 
 
 # 五、日志
 
-使用 logback 框架记录日志。配置参考 logback.xml
+使用 logback 框架记录日志。配置参考 [logback.xml](/src/main/resources/config/logback.xml)
 
 
 # 六、JSP视图解析
@@ -46,4 +47,4 @@
 
 # 八、Redis
 
-引入 Redis 作为权限关系的缓存，详见 RedisConfiguration
+引入 Redis 作为权限关系的缓存，详见 [RedisConfiguration](/src/main/java/com/chen/config/RedisConfiguration.java)
