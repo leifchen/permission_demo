@@ -1,0 +1,46 @@
+spring:
+# DataSource
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_permission?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+# Druid
+    druid:
+      initial-size: 3
+      min-idle: 3
+      max-active: 20
+      max-wait: 60000
+      filters: stat,wall
+      filter:
+        stat:
+          slow-sql-millis: 3000
+          log-slow-sql: true
+          merge-sql: true
+        wall:
+          db-type: mysql
+# SpringMVC
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+# DevTools
+  devtools:
+    restart:
+      exclude: static/**
+      enabled: true
+# Redis
+  redis:
+    host: 192.168.19.100
+    port: 6379
+# Mybatis
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.chen.model
+  configuration:
+    safe-row-bounds-enabled: true
+    cache-enabled: false
+    use-generated-keys: true
+
+
